@@ -1,0 +1,33 @@
+﻿@page "/counter"
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status" qa-id="CounterValue">Current count: @currentCount</p>
+
+<button class="btn btn-primary" qa-id="IncreaseByOne" @onclick="IncrementCountByOne">+1</button>
+
+<button class="btn btn-primary" qa-id="IncreaseByTwo" @onclick="IncrementCountByTwo">+2</button>
+
+<button class="btn btn-primary" qa-id="IncreaseByThree" @onclick="IncrementCountByThree">+3</button>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCountByOne()
+    {
+        currentCount++;
+    }
+
+    private void IncrementCountByTwo()
+    {
+        currentCount += 2;
+    }
+
+    private void IncrementCountByThree()
+    {
+        currentCount += 3;
+    }
+
+}
